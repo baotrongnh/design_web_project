@@ -16991,8 +16991,17 @@ body {
     font-size: 3.1rem;
     padding: 25px 30px;
   }
+  .home .main .carrer-block .title {
+    font-size: 4rem;
+  }
+  .home .main .carrer-block .sub-title {
+    margin-bottom: 10px;
+  }
   .home .main .carrer-block .item {
     padding: 15px;
+  }
+  .home .main .carrer-block .item .item-title {
+    font-size: 2rem;
   }
   .home .main .price-block {
     height: 1800px;

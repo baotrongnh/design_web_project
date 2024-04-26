@@ -1,5 +1,6 @@
-.home {
 
+.home {
+     
      .header {
           height: 65px;
           padding: 0 50px;
@@ -180,6 +181,7 @@
      }
      
      .main {
+
           background-image: $bg-light-home;
           // height: 750px;
           width: 100%;
@@ -971,9 +973,23 @@
 
                .carrer-block {
 
+                    .title {
+                         font-size: 4rem;
+                    }
+
+                    .sub-title {
+                         margin-bottom: 10px;
+                    }
+
                     .item {
                          padding: 15px;
+                         
+                         .item-title {
+                              font-size: 2rem;
+                         }
                     }
+
+                    
                }
 
                .price-block {
@@ -987,6 +1003,7 @@
                          
                          .outside {
                               padding: 20px 40px;
+                              // margin: 10px;
                          }
                     }
                }

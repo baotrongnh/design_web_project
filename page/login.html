@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Đăng nhập tài khoản</title>
+
+     <link rel="stylesheet" href="../assets/css/app.css">
+     <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<script>
+     function closeTab(tabId) {
+          let tab = document.getElementById(tabId);
+          let btnClose = document.getElementById("btnCloseId");
+          tab.style.display = "none";
+     }
+
+     function showPassword() {
+          let password = document.getElementById("password");
+          let btnShow = document.getElementById("btn-show");
+          let btnHide = document.getElementById("btn-hide");
+          password.type = "text";
+          btnShow.style.display = "none";
+          btnHide.style.display = "block";
+     }
+
+     function hidePassword() {
+          let password = document.getElementById("password");
+          let btnShow = document.getElementById("btn-show");
+          let btnHide = document.getElementById("btn-hide");
+          password.type = "password";
+          btnShow.style.display = "block";
+          btnHide.style.display = "none";
+     }
+
+     function checkBlank() {
+
+     }
+
+</script>
+
+<body class="login">
+
+     <div class="container app">
+
+               <!-- login-block -->
+               <div class="row login-block col-lg-8 col-12">
+                    
+                    <!-- form-block -->
+                    <div class="col-lg-6 col-md-6 col-12 form-block">
+
+                         <a href="../index.html"><i class="fa-solid fa-circle-xmark back-to-home"></i></a>
+
+                         <h1 class="title">Đăng nhập</h1>
+
+                         <!--form input login -->
+                         <!-- put class "wrong-password" here -->
+                         <form action="" class="form wrong-password"> <!--class = "form wrong-password"--> 
+
+
+                              <div id="noti-wrong-password" class="notification" hidden>
+                                   Tên đăng nhập hoặc mật khẩu không đúng
+                                   <i onclick="closeTab('noti-wrong-password')" class="fa-solid fa-xmark"></i>
+                              </div>
+
+                              <div class="input-block">
+                                   <input type="text" name="username" id="username" autofocus autocomplete="username" required placeholder="">
+                                   <label for="username">Tên đăng nhập</label>
+                              </div>
+     
+                              <div class="input-block">
+                                   <input type="password" name="password" id="password" required placeholder="">
+                                   <label for="password">Mật khẩu</label>
+                                   <i id="btn-show" onclick="showPassword()" class="fa-solid fa-eye"></i>
+                                   <i id="btn-hide" onclick="hidePassword()" style="display: none;" class="fa-solid fa-eye-slash"></i>
+                              </div>
+
+                              <button>Đăng nhập</button>
+
+                              <h5>hoặc đăng nhập với</h5>
+
+                              <div class="icon-social">
+                                   <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                   <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                              </div>
+
+                         </form>
+                    </div>
+
+                    <!-- right-text-block -->
+                    <div class="text-block col-lg-6 col-md-6 col-12">
+                         <h1 class="title">Chào mừng trở lại!</h1>
+                         <p class="sub-title">Chào mừng bạn quay trở lại! Chúng tôi rất vui khi bạn có mặt ở đây. Chúng tôi hy vọng bạn sẽ có trải nghiệm tuyệt vời!</p>
+                         <a href="./sign-up.html" class="btn-sign-up">Chưa có tài khoản? Đăng ký</a>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+</body>
+</html>

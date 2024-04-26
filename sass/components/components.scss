@@ -1,0 +1,52 @@
+@mixin button-blue {
+     display: inline-block;
+     color: white;
+     background-color: $btn-home-main;
+     padding: 12px 40px;
+     border-radius: 25px;
+     transition: 0.3s;
+     text-decoration: none;
+     text-align: center;
+
+     &:hover {
+          background-color: $btn-home-main-hover;
+     }
+}
+
+@keyframes pop-up-page {
+     0% {
+          transform: translateY(30px);
+     }
+
+     100% {
+          transform: translate(0);
+     }
+}
+
+@keyframes menu-mobile {
+     0% {
+          opacity: 0;
+          width: 0;
+     }
+
+     100% {
+          width: 100%;
+     }
+}
+
+@keyframes slideDown {
+     0% {
+          opacity: 0;
+          transform: rotateX(-90deg);
+     }
+     
+     50% {
+          transform: rotateX(-20deg);
+     }
+     
+     100% {
+          opacity: 1;
+          transform: rotateX(0deg);
+     }
+}
+

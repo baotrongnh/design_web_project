@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>APPLE VIETNAM</title>
+     <link rel="stylesheet" href="./assets/css/app.css">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+     <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+
+<script>
+     function userMenuAction() {
+          let menu = document.getElementById("sub-menu-user");
+          let icon = document.getElementById("icon-down");
+
+          if (document.getElementById("sub-menu-user").style.display === "none") {
+               menu.style.display = "block";
+               icon.style.transitionDuration = "0.3s";
+               icon.style.transform = "rotate(180deg)";
+          }
+          else {
+               menu.style.display = "none";
+               icon.style.transform = "rotate(0deg)";
+          }
+     }
+
+     function userMenuScroll() {
+          let menu = document.getElementById("sub-menu-user");
+          let icon = document.getElementById("icon-down");
+
+          if (document.getElementById("sub-menu-user").style.display === "block") {
+               menu.style.display = "none";
+               icon.style.transitionDuration = "0.3s";
+               icon.style.transform = "rotate(0deg)";
+          }
+     }
+     
+     function openNavMobile() {
+          let menu = document.getElementById("menu-mobile");
+          let overlay = document.getElementById("overlay");
+          menu.style.display = "block";
+          menu.style.transform = "translateX(0)";
+          overlay.style.display = "block";
+     }
+
+     function closeNavMobile() {
+          let menu = document.getElementById("menu-mobile");
+          let overlay = document.getElementById("overlay");
+          menu.style.transform = "translateX(100%)";
+          overlay.style.display = "none";
+     }
+
+</script>
+
+<body onscroll="userMenuScroll()" class="home">
+     
+     <header class="wrapper container-fluid">
+          <div class="row header">
+
+               <div class="logo col-lg-3">
+                    <a href="" class="logo-link">
+                         <img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg?v=202404221010" alt="" class="logo-img">
+                    </a>
+               </div>
+
+               <div class="navbar col-lg-6">
+
+                    <div onclick="openNavMobile()" id="btn-open-mobile" class="menu-mobile" hidden>
+                         <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <div onclick="closeNavMobile()" id="overlay" class="overlay" hidden></div>
+
+                    <ul class="navbar-list">
+                         <li class="navbar-item">
+                              <a class="navbar-item-link" href="">
+                                   Lĩnh vực
+                                   <i class="fa-solid fa-caret-down"></i>
+                              </a>
+                              
+                              <ul class="sub-nav">
+                                   <li class="sub-nav-item">
+                                        <a href="">Thời trang</a>
+                                   </li>
+                                   <li class="sub-nav-item">
+                                        <a href="">Sách & Văn phòng phẩm</a>
+                                   </li>
+                                   <li class="sub-nav-item">
+                                        <a href="">Khách sạn</a>
+                                   </li>
+                                   <li class="sub-nav-item">
+                                       <a href="">Mỹ phẩm</a>
+                                   </li>
+                              </ul>
+                         </li>
+
+                         <li class="navbar-item">
+                              <a class="navbar-item-link" href="">
+                                   Dịch vụ
+                                   <i class="fa-solid fa-caret-down"></i>
+                              </a>
+                              
+
+                              <ul class="sub-nav">
+                                   <li class="sub-nav-item">
+                                        <a href="">Quản lý nhà hàng, quán ăn</a>
+                                   </li>
+                                   <li class="sub-nav-item">
+                                        <a href="">Bán hàng trên website</a>
+                                   </li>
+                                   <li class="sub-nav-item">
+                                        <a href="">Quản lý nhà nghỉ, khách sạn</a>
+                                   </li>
+                                   <li class="sub-nav-item">
+                                       <a href="">Cửa hàng quần áo, giày dép</a>
+                                   </li>
+                              </ul>
+                         </li>
+
+                         <li class="navbar-item">
+                              <a class="navbar-item-link" href="#price">Bảng giá</a>
+                         </li>
+
+                         <li class="navbar-item">
+                              <a class="navbar-item-link" href="">Blog</a>
+                         </li>
+                         
+                         <li class="navbar-item">
+                              <a class="navbar-item-link" href="">
+                                   Thêm
+                                   <i class="fa-solid fa-caret-down"></i>
+                              </a>
+                         </li>
+                    </ul>
+               </div>
+
+<!-- add class "status-login" here to show user profile-->
+               <div class="col-lg-3 btn"> <!-- class="col-lg-3 btn status-login" -->
+                    <div class="btn-box">
+                         <a href="./page/login.html" class="btn-login">Đăng nhập</a>
+                         <a href="./page/sign-up.html" class="btn-sign-up">Đăng ký</a>
+                    </div>
+
+                    <div class="user-profile" hidden>
+     
+                         <a href="https://youtu.be/xvFZjo5PgG0?si=XUDguJ2w9AByfdn_">
+<!-- user name here -->
+                              <h5 class="user-name">Bảo Trọng</h5>
+
+<!-- username avatar -->
+                              <img src="./assets/img/avatar-user.png" alt="" class="avatar-user">
+                         </a>
+
+                         <i onclick="userMenuAction()" id="icon-down" class="fa-solid fa-chevron-down"></i>
+
+                         <ul style="display: none;" id="sub-menu-user" class="sub-menu-profile">
+
+                              <!-- account -->
+                              <li  class="sub-menu-list">
+                                   <i class="fa-solid fa-user"></i>
+                                   Tài khoản
+                              </li>
+
+                              <!-- setting -->
+                              <li class="sub-menu-list">
+                                   <i class="fa-solid fa-gear"></i>
+                                   Cài đặt
+                              </li>
+                              
+                              <!-- log out -->
+                              <li class="sub-menu-list">
+                                   <i class="fa-solid fa-right-from-bracket"></i>
+                                   Đăng xuất
+                              </li>
+                         </ul>
+                    </div>
+
+               </div>
+               
+               <div id="menu-mobile" class="nav-mobile">
+                    <i onclick="closeNavMobile()" class="fa-solid fa-circle-xmark"></i>
+                    <img src="https://www.sapo.vn/Themes/Portal/Default/StylesV2/images/logo/Sapo-logo.svg?v=202404221010" alt="">
+                    <ul class="menu-list">
+                         <li onclick="closeNavMobile()" class="list-item">
+                              <a class="list-item-link" href="#price">Bảng giá</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="">Lĩnh vực</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="">Kho giao diện</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="">Khách hàng</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="">Blog</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="">Trợ giúp</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="./page/sign-up.html">Đăng ký</a>
+                         </li>
+
+                         <li class="list-item">
+                              <a class="list-item-link" href="./page/login.html">Đăng nhập</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+
+           
+
+     </header>
+
+     <main class="main">
+          <div class="container hero">
+               <div class="row">
+                    <div class="col-lg-6 col-12 block-left">
+                         <div class="block-text">
+                              <h1 class="title">Giải pháp thiết kế website chuyên nghiệp</h1>
+                              <p class="sub-title">Phù hợp với tất cả doanh nghiệp, cửa hàng quy mô lớn, vừa & nhỏ</p>
+                              <a href="./page/sign-up.html" class="btn-try">Dùng thử miễn phí</a>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 block-right">
+                         <div class="circle">
+                              <img class="main-photo" src="./assets/img/web-project-img.png" alt="photo">
+                              <img src="./assets/img/web-project-img-3.png" alt="" class="sub-photo">
+                              <img class="arrow-img" src="./assets/img/arrow.png" alt="">
+                              <i class="fa-solid fa-cart-shopping"></i>
+                              <p>1</p>
+                         </div>
+                    </div>
+
+                    <a href="./page/sign-up.html" class="btn-try-mobile" hidden>Dùng thử miễn phí</a>
+               </div>
+          </div>
+
+          <div class="container">
+               <div class="row gx-5 card-block">
+                    <div class="col-lg-4">
+                         <div class="card-info card-1">
+                              <i class="fa-solid fa-users"></i>
+                              <div class="card-text">
+                                   <div class="card-title">Được tin tưởng bởi</div>
+                                   <div class="card-number">999+</div>
+                                   <div class="card-sub-title">khách hàng</div>
+                              </div>
+                         </div>
+                    </div>
+          
+                    <div class="col-lg-4">
+                         <div class="card-info card-2">
+                              <i class="fa-solid fa-pager"></i>
+                              <div class="card-text">
+                                   <div class="card-title">Có sẵn</div>
+                                   <div class="card-number">400+</div>
+                                   <div class="card-sub-title">giao diện đẹp</div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                         <div class="card-info card-3">
+                              <i class="fa-solid fa-cart-shopping"></i>
+                              <div class="card-text">
+                                   <div class="card-title">Đáp ứng</div>
+                                   <div class="card-number">50+</div>
+                                   <div class="card-sub-title">lĩnh vực, ngành nghề</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
+
+          <div class="container-fluid we-have">
+               <h1 class="main-title">Thiết kế website tại chúng tôi có...</h1>
+               <div class="container">
+                    <div class="row content">
+                         <div class="col-lg-6 col-12 text-block">
+     
+                              <div class="content-block">
+                                   <h1 class="title">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                        Giao diện chuẩn SEO
+                                   </h1>
+                                   <p class="sub-text">
+                                        Mọi giao diện được thiết kế hiện đại, tối ưu chất lượng dựa theo tiêu chí xếp hạng 
+                                        và đánh giá của của các công cụ tìm kiếm.
+                                   </p>
+                              </div>
+     
+                              <div class="content-block">
+                                   <h1 class="title">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                        Đa dạng ngành nghề
+                                   </h1>
+                                   <p class="sub-text">
+                                        Dịch vụ thiết kế website cung cấp giao diện đảm bảo UI-UX 
+                                        đáp ứng hầu hết tất cả nhu cầu của khách hành với hơn 50 ngành nghề và lĩnh vực khác nhau.
+                              </div>
+     
+                              <div class="content-block">
+                                   <h1 class="title">
+                                        <i class="fa-regular fa-circle-check"></i>
+                                        Hiển thị tốt trên mọi thiết bị
+                                   </h1>
+                                   <p class="sub-text">
+                                        Tất cả các giao diện sử dụng công nghệ Responsive, đồng bộ hiển thị tất cả các thiết bị:
+                                        PC, Laptop, Table & Mobile.
+                                   </p>
+                              </div>
+     
+                         </div>
+     
+                         <div class="col-lg-6 col-12 img-block">
+                              <img src="./assets/img/mockup-screen-1.png" alt="">
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="container-flud admin">
+               <div class="container">
+                    <div class="row content-block">
+
+                         <h1 class="main-title">Quản trị đơn giản, điều chỉnh dễ dàng</h1>
+
+                         <div class="col-lg-6 col-12 img-block">
+                              <img src="./assets/img/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg" alt="">
+                         </div>
+                         
+                         <div class="col-lg-6 col-12 text-block">
+                              <div class="row box-block">
+
+                                   <div class="col-lg-6 col-12 box">
+                                        <div class="box-inside">
+                                             <div class="content">
+                                                  <img src="./assets/img/settings.png" alt="">
+                                                  <h1 class="title">Hệ thống quản lý rõ ràng, thao tác ngắn gọn</h1>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="col-lg-6 col-12 box">
+                                        <div class="box-inside">
+                                             
+                                             <img src="./assets/img/web-design.png" alt="">
+                                             <h1 class="title">Tự động điều chỉnh giao diện theo ý muốn</h1>
+                                             
+                                        </div>
+                                   </div>
+
+                                   <div class="col-lg-6 col-12 box">
+                                        <div class="box-inside">
+                                             
+                                             <img src="./assets/img/settings-2.png" alt="">
+                                             <h1 class="title">Dễ dàng tự thêm/bớt các tính năng</h1>
+                                             
+                                        </div>
+                                   </div>
+
+                                   <div class="col-lg-6 col-12 box">
+                                        <div class="box-inside">
+                                             
+                                             <img src="./assets/img/settings-3.png" alt="">
+                                             <h1 class="title">Webdite tự động nâng cấp, bảo trì</h1>
+                                             
+                                        </div>
+                                   </div>
+
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="btn">
+                         <a href="" class="btn-try">Dùng thử miễn phí</a>
+                    </div>
+               </div>
+          </div>
+
+          <div class="container-flud carrer-block">
+               <div class="container">
+                    <h1 class="title">Thiết kế website chuyên nghiệp theo ngành nghề</h1>
+                    <p class="sub-title">Những mẫu website đẹp, phù hợp với ngành nghề, lĩnh vực bạn quan tâm</p>
+                    <div class="row">
+                         <div class="col-lg-3 col-4 item">
+
+                              <div class="img-block">
+                                   <img src="./assets/img/dress.png" alt="">
+                              </div>
+                              <h1 class="item-title">Thời trang</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-4 item">
+                              
+                              <div class="img-block">
+                                   <img src="./assets/img/hotel.png" alt="">
+                              </div>
+                              <h1 class="item-title">Khách sạn</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-4 item">
+                             
+                              <div class="img-block">
+                                   <img src="./assets/img/restaurant-building.png" alt="">
+                              </div>
+                              <h1 class="item-title">Nhà hàng</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-6 item">
+                              
+                              <div class="img-block">
+                                   <img src="./assets/img/office-building.png" alt="">
+                              </div>
+                              <h1 class="item-title">Doanh nghiệp</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-6 item">
+                              
+                              <div class="img-block">
+                                   <img src="./assets/img/stack-of-books.png" alt="">
+                              </div>
+                              <h1 class="item-title">Sách - VP phẩm</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-4 item">
+                              
+                              <div class="img-block">
+                                   <img src="./assets/img/house.png" alt="">
+                              </div>
+                              <h1 class="item-title">Bất động sản</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-4 item">
+                              
+                              <div class="img-block">
+                                   <img src="./assets/img/furniture.png" alt="">
+                              </div>
+                              <h1 class="item-title">Nội thất</h1>
+                              
+                         </div>
+
+                         <div class="col-lg-3 col-4 item">
+                              
+                              <div class="img-block">
+                                   <img src="./assets/img/cosmetics.png" alt="">
+                              </div>
+                              <h1 class="item-title">Mỹ phẩm</h1>
+                              
+                         </div>
+                    </div>
+               </div>
+          </div>
+          
+          <div class="container-flud price-block" id="price">
+               <div class="container">
+
+                    <h1 class="title">Bảng giá dịch vụ thiết kế website</h1>
+
+                    <div class="row gx-5 price-card-block">
+                         <div class="col-lg-4 outside">
+                              <div class="card-item">
+                                   <img src="./assets/img/basic.png" alt="">
+                                   <h1 class="item-name">Basic</h1>
+                                   <p class="price-number"><span class="one">399.000đ</span>/tháng</p>
+                                   <p class="item-info">Website giới thiệu doanh nghiệp</p>
+                                   <a href="" class="btn-try btn-1">Dùng thử</a>
+                              </div>
+                         </div>
+
+                         <div class="col-lg-4 outside">
+                              <div class="card-item">
+                                   <img src="./assets/img/standard.png" alt="">
+                                   <h1 class="item-name">Standard</h1>
+                                   <p class="price-number"><span class="two">799.000đ</span>/tháng</p>
+                                   <p class="item-info">Website giới thiệu doanh nghiệp</p>
+                                   <a href="" class="btn-try btn-2">Dùng thử</a>
+                              </div>
+                         </div>
+
+                         <div class="col-lg-4 outside">
+                              <div class="card-item choose">
+
+                                   <img src="./assets/img/premium.png" alt="">
+                                   <h1 class="item-name">Premium</h1>
+                                   <p class="price-number"><span class="three">999.000đ</span>/tháng</p>
+                                   <p class="item-info">Website giới thiệu doanh nghiệp</p>
+                                   <a href="" class="btn-try btn-3">Dùng thử</a>
+                                   <div class="triangle-rcm"></div>
+                                   <p class="rcm-text">Gói<br>phổ biến</p>
+                                   
+                              </div>
+                         </div>
+                    </div>
+
+                    <a href="" class="detail">
+                         Xem chi tiết giá 
+                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+               </div>
+          </div>
+     </main>
+
+     <footer class="container-flud footer">
+          <div class="container">
+               <div class="row gx-5">
+
+                    <div class="col-lg-3 col-6">
+                         <div class="content-block">
+                              <h1 class="title">[name]</h1>
+                              
+                              <a href="">Về chúng tôi</a>
+                              <a href="">[name] là gì</a>
+                              <a href="">Blog [name]</a>
+                              <a href="">Bảng giá</a>
+                              <a href="">Profile sản phẩm</a>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                         <div class="content-block">
+                              <h1 class="title">Thiết kế website</h1>
+                              
+                              <a href="">Thiết kế website bán hàng</a>
+                              <a href="">Thiết kế website thời trang</a>
+                              <a href="">Thiết kế website doanh nghiệp</a>
+                              <a href="">Thiết kế website bất động sản</a>
+                              <a href="">Thiết kế website thương mại điện tử</a>
+                              <a href="">Thiết kế website giá rẻ</a>
+                              <a href="">Mẫu webdite đẹp</a>
+                              <a href="">Đăng ký tên miền</a>
+                         </div>
+                    </div>
+
+                    <hr class="mobile-line" hidden>
+
+                    <div class="col-lg-3 col-6">
+                         <div class="content-block">
+                              <h1 class="title">Hợp tác</h1>
+                              
+                              <a href="">Nhà phát triển ứng dụng</a>
+                              <a href="">Dành cho nhà thiết kế</a>
+                              <a href="">Dành cho nhà đầu tư</a>
+                              <a href="">Dành cho trường đại học</a>
+                              <br>
+                              
+                              <h1 class="title">Liên hệ hợp tác</h1>
+                              <a href="">Phone: <b>000000000</b></a>
+                              <a href="">Email: <b>abcxyz@gmail.com</b></a>
+                         </div>
+                    </div>
+
+                    <div class="col-lg-3 col-6">
+                         <div class="content-block">
+                              <h1 class="title">Trợ giúp</h1>
+                              
+                              <a href="">Trung tâm trợ giúp</a>
+                              <a href="">Hình thức thanh toán</a>
+                              <a href="">Hướng dẫn đăng nhập</a>
+                              <a href="">Quy định sử dụng</a>
+                              <a href="">Chính sách bảo vệ dữ liệu cá nhân</a>
+                              <a href="">Liên hệ</a>
+                              
+                         </div>
+                    </div>
+
+                    <hr class="mobile-line" hidden>
+
+                    <div class="col-12">
+                         <div class="content-block-contact">
+                              <h1 class="title">Liên hệ</h1>
+                              
+                              <a href=""><i class="fa-brands fa-facebook"></i></a>
+                              <a href=""><i class="fa-brands fa-discord"></i></a>
+                              <a href=""><i class="fa-solid fa-square-phone"></i></a>
+                              
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+
+          <p class="nhbt">@NHBT</p>
+     </footer>
+</body>
+</html>
